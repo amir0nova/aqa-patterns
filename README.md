@@ -1,4 +1,4 @@
-Здесь будет бейдж CI (AppVeyor)
+[![Build status](https://ci.appveyor.com/api/projects/status/ygwk4x36jav8do2c/branch/master?svg=true)](https://ci.appveyor.com/project/amir0nova/aqa-patterns/branch/master)
 
  #### Нетология. Курс «Автоматизация тестирования»
 
