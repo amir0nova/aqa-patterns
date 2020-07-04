@@ -9,7 +9,7 @@ build: off  # будем использовать свой скрипт сбор
 install:
   # запускаем SUT (запоминаем информацию о процессе в переменной $App)
   - ps: $App = Start-Process -FilePath java -ArgumentList "-jar ./artifacts/app-card-delivery.jar" -PassThru
-  # прописать 2-й SUT ("-jar ./artifacts/app-ibank.jar")
+  # прописать 2-й SUT ("-jar ./artifacts/app-ibank.jar"), ТАКЖЕ запуск с флагом!!!!
 
 build_script:
   - ps: chmod +x ./gradlew  # команда с флагом chmod +x делает файл исполняемым
