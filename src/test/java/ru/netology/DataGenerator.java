@@ -23,25 +23,14 @@ public class DataGenerator {
         return city;
     }
 
-    public static DateDeliveryKit setFakerDateDelivery() {
-        String[] patterns = {"dd.MM.yyyy", "ddMMyyyy", "dd MM yyyy"};
-        Random random = new Random();
-        int index = random.nextInt(patterns.length);
-        String pattern = patterns[index];
-
-        int[] datesPlus = {3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14};
-        int index1 = random.nextInt(datesPlus.length);
-        int index2;
-        do {
-            index2 = random.nextInt(datesPlus.length);
-        } while ((index2 < index1) && (index2 > index1));
-        int addDays1 = datesPlus[index1];
-        int addDays2 = datesPlus[index2];
+    public static DateDeliveryKit setDateDeliveryForFixedPattern() {
+        DateTimeFormatter datePointsFormatter = DateTimeFormatter.ofPattern("ddMMyyyy");
+        int addDays1 = 14; //  Note: should be "addDays1 >= 3"
+        int addDays2 = 7; //  Note: should be "addDays2 >= 3"
 
         LocalDate now = LocalDate.now();
         LocalDate dateDelivery1 = now.plusDays(addDays1);
         LocalDate dateDelivery2 = now.plusDays(addDays2);
-        DateTimeFormatter datePointsFormatter = DateTimeFormatter.ofPattern(pattern);
         String inputDateDelivery1 = datePointsFormatter.format(dateDelivery1);
         String inputDateDelivery2 = datePointsFormatter.format(dateDelivery2);
         return new DateDeliveryKit(

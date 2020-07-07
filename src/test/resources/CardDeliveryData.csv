@@ -1,0 +1,6 @@
+Tests "Happy path" // разные паттерны даты!!!!
+В-А-Ж-Н-О: Перед каждым запуском теста здесь изменять значения в поле(ях) "city" и/или "passportName" и/или "phone".
+city,pattern,addDays1,passportName,phone,addDays2,message,workingNotesOfTester,BugNumber
+Санкт-Петербург,dd.MM.yyyy,4,Марков Дмитрий,+79151548630,5,Should input the form for delivery a card ("Happy Path"),формат даты: dd.MM.yyyy (разделение точками),
+Владивосток,ddMMyyyy,5,Ипполитов-Нестеренко Михаил,+79242684231,4,Should input the form for delivery a card ("Happy Path"),формат даты: ddMMyyyy (без разделителей),
+Мурманск,dd MM yyyy,366,Румянцева Оксана,+79602712163,30,Should input the form for delivery a card ("Happy Path"),формат даты: dd MM yyyy (разделение пробелами),
